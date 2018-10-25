@@ -1,0 +1,61 @@
+.main .title{
+margin-top: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.main .email_field{
+  margin-top: 10px;
+  resize: none;
+  width: 250px;
+    font-size: 20px;
+    height: 30px;
+
+}
+
+.main .oldpass{
+  margin-top: 10px;
+  resize: none;
+    font-size: 20px;
+    height: 30px;
+}
+
+.main .newpass, .confirmpass{
+    margin-top: 15px;
+      resize: none;
+    font-size: 20px;
+    height: 30px;
+}
+
+.main .confirmpass{
+    margin-left: 10px;
+}
+
+.emailBtn, .passBtn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #385873;
+    color: FFFFFF;
+    font-weight: bold;
+    font-size: 23px;
+    width: 250px;
+    height: 40px;
+    border-radius: 12px;
+    
+}
+
+.resetBtn{
+    margin-top: 10px;
+    margin-bottom: 20px;    
+    background-color: #385873;
+    color: FFFFFF;
+    font-weight: bold;
+    font-size: 23px;
+    width: 250px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.passBtn{
+    margin-left: 5px;
+}

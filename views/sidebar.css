@@ -1,0 +1,66 @@
+.sidenav {
+    height: 100%;
+    width: 160px;
+    z-index: 1;
+    background-color: #385873;
+    overflow-x: hidden;
+    text-align:center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #FFFFFF;
+    display: block;
+	margin: 50px 0;
+}
+
+.sidenav ul a.log_out{
+    margin-top: 125px;
+    padding-bottom: 0;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    background-color: #FFFFFF;
+	color: #000000;
+}
+
+.sidenav ul a.active{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+/* Style page content */
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header, .main-content {
+  padding: 0px 10px;
+}
+
+/* Remove bullets and indent */
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+@media screen and (max-height: 750px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav ul a.log_out{ margin-top: 100px;}
+}
+
+@media screen and (max-height: 600px){
+    .sidenav ul a.log_out{ margin-top: 50px;}
+}
+
+@media screen and (max-width: 1400px) {
+    .sidenav a {font-size: : 18px;}
+}

@@ -1,0 +1,43 @@
+.main .name_field{
+    margin-top: 5px;
+    resize: none;
+    font-size: 20px;
+    height: 30px;
+}
+
+.main .price_field, .rate_field{
+    margin-top: 5px;
+    resize: none;
+    font-size: 20px;
+    height: 30px;
+}
+
+.main .name, .price, .rate{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.main .price_rate_text{
+    margin-top: 20px;
+}
+
+.main .rate{
+    margin-left: 176px;
+}
+
+.main .rate_field{
+    margin-left: 30px;
+}
+
+.addBtn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #385873;
+    color: FFFFFF;
+    font-weight: bold;
+    font-size: 23px;
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    
+}
