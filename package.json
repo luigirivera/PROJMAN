@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/luigirivera/PROJMAN/issues"
   },
-  "homepage": "https://github.com/luigirivera/PROJMAN#readme"
+  "homepage": "https://github.com/luigirivera/PROJMAN#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
