@@ -10,46 +10,84 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
-    #logo {
-      height: 200px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    #logo{
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .navbar {
-      overflow: hidden;
-      background: white;
-      font-family: "Lato", sans-serif;
-    }
-
-    .navbar a {
-      float: left;
-      font: 16px;
-      color: #333;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-
+    .navbar{
+        overflow: hidden;
+        background: white;
+        font-family: "Lato", sans-serif;
 
     }
 
-    .navbar a:hover {
-      text-decoration: underline;
-      text-decoration-color: #4498BF;
+    .navbar a{
+        float: right;
+        font: 20px;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-right: 20px;
+        margin-left: 10px;
+
+
+    }
+
+    .navbar a:hover{
+        text-decoration: underline;
+        text-decoration-color: #4498BF;
     }
 
     hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid rgba(204, 204, 204, 0.89);
-      margin: 0;
-      padding: 0;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid rgba(204, 204, 204, 0.89);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
-    #home {
-      color: #4498BF;
+    #home{
+        color:  #4498BF;
+    }
+
+    #form_btn{
+        float: right;
+        font: 20px;
+        color: #333;
+        text-align: center;
+        padding: 12px 14px;
+        border-style: none;
+        border-radius: 12px;
+        margin-left: 20px;
+        /*margin-bottom: 5px;*/
+        margin-right: 40px;
+        font-family: "Lato", sans-serif;
+        /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
+        background-color: #3FB72F;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    #form_btn:hover{
+        color: #3FB72F;
+        background-color: white;
+        border-style: solid;
+        border-color: #3FB72F;
+        padding: 10px 12px;
+    }
+
+    #logo2{
+        float: left;
+        height: 50px;
+        margin-left: 20px;
+        margin-right: 15px;
     }
 
     .carousel-container {
@@ -60,7 +98,6 @@
     #myCarousel {
       height: 50rem;
       width: 80%;
-      margin: 5rem;
     }
 
     .carousel-inner div {
@@ -78,16 +115,25 @@
 
 <body>
 
-  <div id="top_logo">
-    <img id=logo src="MRKLEANLOGO.png">
-  </div>
+  <!--<div id= "top_logo">
+    <img id = logo src="logo2.png">
+  </div>-->
 
   <hr/>
 
-  <div class="navbar">
-    <a id="home">HOME</a>
-    <a>SERVICES</a>
-    <a>CONTACT US</a>
+  <div class = "navbar">
+      <div id="items">
+
+          <button value="Pickup & Delivery" id="form_btn">PICKUP & DELIVERY</button>
+
+          <img id="logo2" src="logo2.png">
+           <a id="home">HOME</a>
+          <a>CONTACT US</a>
+          <a>SERVICES</a>
+
+
+      </div>
+
   </div>
 
   <div class="carousel-container">
