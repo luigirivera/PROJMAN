@@ -1,41 +1,43 @@
 <html>
 	<head>
 		<title>Admin - Account</title>
-		<link rel="stylesheet" href="sidebar.css">
-		<link rel="stylesheet" href="content.css">
-        <link rel="stylesheet" href="account.css">
+		<link rel='stylesheet' href='sidebar.css'>
+		<link rel='stylesheet' href='content.css'>
+        <link rel='stylesheet' href='account.css'>
+        
 	</head>
 	<body>
-		<div class="sidenav">
+		<div class='sidenav'>
 			<ul>
-            <a href="admin_information.html"><img class="logo" src="MRKLEANLOGO.png"></a>
+            <a href='admin_information.html'><img class='logo' src='MRKLEANLOGO.png'></a>
             </ul>
-            <ul class="list">
-			  <a href="admin_information.html">Information</a>
-			  <a href="admin_services.html">Services</a>
-			  <a href="admin_promos.html">Promos</a>
-			  <a href="admin_orders.html">Orders</a>
-			  <a href="admin_account.html" class="active">Account</a>
-				<a href="#" class="log_out">Log Out</a>
+            <ul class='list'>
+			  <a href='admin_information.html'>Information</a>
+			  <a href='admin_services.html'>Services</a>
+			  <a href='admin_promos.html'>Promos</a>
+			  <a href='admin_orders.html'>Orders</a>
+			  <a href='admin_account.html' class='active'>Account</a>
+				<a href='#' class='log_out'>Log Out</a>
 			</ul>
 		</div>
-		<div class="main">
-			<div class="main-header">
-				<h1 id="header">Account</h1>
+		<div class='main'>
+			<div class='main-header'>
+				<h1 id='header'>Account</h1>
 			</div>
 		<hr>
-            <div class="main-content">
-                <span class="title">Email</span><br>
-                <textarea class="email_field"></textarea><br>
-                <button class="emailBtn">UPDATE</button><br>
-                <span class="title">Change Password</span><br>
-                <input type="password" placeholder="Old Password" class="oldpass"><br>
-                <input type="password" placeholder="New Password" class="newpass">
-                <input type="password" placeholder="Confirm Password" class="confirmpass"><br>
-                <button class="passBtn">UPDATE</button>
-                <button class="resetBtn">RESET</button>
+            <div class='main-content'>
+                <span class='title'>Email</span><br>
+                <textarea class='email_field' id='email'></textarea><br>
+                <button class='emailBtn'>UPDATE</button><br>
+                <span class='title'>Change Password</span><br>
+                <input type='password' placeholder='Old Password' class='oldpass' id='oldpass'><br>
+                <input type='password' placeholder='New Password' class='newpass' id='newpass'>
+                <input type='password' placeholder='Confirm Password' class='confirmpass' id='confirmpass'><br>
+                <button class='passBtn' id='passBtn'>UPDATE</button>
+                <button class='resetBtn' id='resetBtn'>RESET</button>
                 <br>
             </div>
 		</div>
+        <script src='account.js'></script>
 	<body>
 </html>
