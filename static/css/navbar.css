@@ -26,14 +26,14 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid rgba(204, 204, 204, 0.89);
+    border-top: 0px solid rgba(204, 204, 204, 0.89);
     margin: 0;
     padding: 0;
     width: 100%;
     margin-bottom: 10px;
 }
 
-#form_btn{
+#logOut_btn{
     float: right;
     font: 20px;
     color: #333;
@@ -51,7 +51,7 @@ hr {
     font-weight: bold;
 }
 
-#form_btn:hover{
+#logOut_btn:hover{
     color: #3FB72F;
     background-color: white;
     border-style: solid;
