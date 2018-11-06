@@ -14,9 +14,47 @@
             #services {
               color: #4498BF;
             }
+            
+            .heading{
+                text-align: center;
+                font-size: 50px;
+            }
+            
+            .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            font-family: "Lato", sans-serif;
+
+            }
+            
+            #heading{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <%- include('navbar.ejs') %>
+        
+        <p class="heading">Services</p>
+        
+        <div class="row">
+            <div class="column" style="margin-left: 130px;width: 35%">
+                <h1 class="wash" id="heading">Wash</h1>
+            </div>
+            <div class="column" style="margin-left: 130px;width: 35%">
+                <h1 class="dry" id="heading">Dry</h1>
+            </div> 
+        </div>
+        
+        <div class="row">
+            <div class="column" style="margin-left: 130px;width: 35%">
+                <h1 class="fold" id="heading">Fold</h1>
+            </div>
+            <div class="column" style="margin-left: 130px;width: 35%">
+                <h1 class="pickanddeliver" id="heading">Pickup & Deliver</h1>
+            </div> 
+        </div>
     </body>
 </html>
