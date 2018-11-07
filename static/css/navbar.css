@@ -33,7 +33,7 @@ hr {
     margin-bottom: 10px;
 }
 
-#logOut_btn{
+#form_btn{
     float: right;
     font: 20px;
     color: #333;
@@ -51,7 +51,7 @@ hr {
     font-weight: bold;
 }
 
-#logOut_btn:hover{
+#form_btn:hover{
     color: #3FB72F;
     background-color: white;
     border-style: solid;
