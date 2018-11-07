@@ -1,20 +1,78 @@
-<html>
 	<head>
 		<title>Admin - Promos</title>
-		<link rel="stylesheet" href="sidebar.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--
 		<link rel="stylesheet" href="content.css">
+		<link rel="stylesheet" href="information.css">
+-->
+        <link rel="stylesheet" href="../../static/css/navbar.css">
 	</head>
+    
+    <style>
+        #promos{
+            color: #4498BF;
+        }
+        
+        #logOut_btn{
+            float: right;
+            font: 20px;
+            color: #333;
+            text-align: center;
+            padding: 12px 14px;
+            border-style: none;
+            border-radius: 12px;
+            margin-left: 20px;
+            /*margin-bottom: 5px;*/
+            margin-right: 40px;
+            font-family: "Lato", sans-serif;
+            /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
+            background-color: #3FB72F;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        #logOut_btn:hover{
+            color: #3FB72F;
+            background-color: white;
+            border-style: solid;
+            border-color: #3FB72F;
+            padding: 10px 12px;
+        }
+        
+        #header{
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .main-content{
+            margin-left: 50px;
+        }
+    </style>
 	<body>
-		<div class="sidenav" id="nav_bar">
-			<ul>
-			  <a href="admin_information.html">Information</a>
-			  <a href="admin_services.html">Services</a>
-			  <a href="admin_promos.html" class="active">Promos</a>
-			  <a href="admin_orders.html">Orders</a>
-			  <a href="admin_account.html">Account</a>
-				<a href="#" class="log_out">Log Out</a>
-			</ul>
-		</div>
+        <hr/>
+
+        <div class = "navbar">
+            <div id="items">
+
+                <button value="Log Out" id="logOut_btn">LOG OUT</button>
+
+                <img id="logo2" src="logo2.png">
+                
+                <a id="account" href="#">ACCOUNT</a>
+                <a id="orders" href="#">ORDERS</a>
+                <a id="promos" href="#">PROMOS</a>
+                <a id="services" href="#">SERVICES</a>
+                <a id="information" href="#">INFORMATION</a>
+
+            </div>
+
+        </div>
 		<div class="main">
 			<div class="main-header">
 				<h1 id="header">Promos</h1>

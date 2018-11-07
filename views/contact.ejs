@@ -1,10 +1,104 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Mr Klean - Contact Us
-        </title>
-    </head>
-    <body>
-        Mr Klean - Contact Us
-    </body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+    <style>
+        #contact {
+            color: #4498BF;
+        }
+
+        #header {
+            font-family: "Lato", sans-serif;
+            text-align: center;
+        }
+
+        .images {
+            margin-top: 60px;
+        }
+
+        #icon {
+            margin-left: 180px;
+            height: 90px;
+            margin-right: 100px;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+
+            margin-left: 208px;
+            margin-right: 115px;
+            color: black;
+        }
+
+        .details {
+            margin-left: 199px;
+            margin-right: 10px;
+            color: black;
+        }
+
+        .labels:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .details:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .map {
+            margin-top: 50px;
+            margin-left: 330px;
+            margin-bottom: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <%- include('navbar.ejs') %>
+
+        <h1 id="header">Contact Us</h1>
+
+        <div class="images">
+            <img src="images/phone_icon.png" id="icon">
+            <img src="images/add_icon.png" id="icon">
+            <img src="images/email_icon.png" id="icon">
+        </div>
+
+
+        <div>
+            <a class="labels">Phone no#:</a>
+            <a class="labels">Address:</a>
+            <a class="labels">E-mail:</a>
+        </div>
+
+
+        <div>
+            <a class="details">09152049017</a>
+            <a class="details">3426-C Lubiran St., Bacood, Sta. Mesa, Manila</a>
+            <a class="details" style="margin-left: 140px">mrklean@yahoo.com</a>
+        </div>
+
+        <div class="details" style="margin-left: 210px;">588-0953</div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.0940921991996!2d121.01514871375413!3d14.593713981160453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9c4bdf89c31%3A0x12bc850dac0787bd!2s3426+Lubiran%2C+Santa+Mesa%2C+Maynila%2C+Kalakhang+Maynila!5e0!3m2!1sen!2sph!4v1541515557109" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+
+</body>
+
 </html>

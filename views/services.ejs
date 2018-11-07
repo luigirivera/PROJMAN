@@ -1,10 +1,93 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Mr Klean - Services
-        </title>
+          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="css/navbar.css">
+        
+        <style>
+            #services {
+              color: #4498BF;
+            }
+            
+            .heading{
+                text-align: center;
+                font-size: 50px;
+            }
+            
+            .column {
+            float: left;
+            width: 50%;
+            margin-left: 190px;
+            width: 35%;
+            height: 300px;
+            font-family: "Lato", sans-serif;
+
+            }
+            
+            .row{
+                margin: 0;
+            }
+            
+            #heading{
+                text-align: center;
+            }
+            
+            #icon{
+                height: 100px;
+                display: block;
+                margin: auto;
+            }
+            
+            #description{
+                text-align:center;
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
-        Mr Klean - Services
+        <%- include('navbar.ejs') %>
+        
+        <p class="heading">Services</p>
+        
+        <div class="row">
+            <div class="column">
+                <h1 class="wash" id="heading">Wash</h1>
+                <br>
+                <img id = "icon" src="images/water_icon.png" align = "middle">
+                <br>
+                <p class="washText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div>
+            <div class="column">
+                <h1 class="dry" id="heading">Dry</h1>
+                <br>
+                <img id = "icon" src="images/dry_icon.png" align = "middle">
+                <br>
+                <p class="dryText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div> 
+        </div>
+        
+        <div class="row" style="margin-top: 50px;">
+            <div class="column">
+                <h1 class="fold" id="heading">Fold</h1>
+                <br>
+                <img id = "icon" src="images/fold_icon.png" align = "middle">
+                <br>
+                <p class="foldText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div>
+            <div class="column">
+                <h1 class="pickanddeliver" id="heading">Pickup & Deliver</h1>
+                <br>
+                <img id = "icon" src="images/delivery_icon.png" align = "middle">
+                <br>
+                <p class="deliverText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div> 
+        </div>
     </body>
 </html>
