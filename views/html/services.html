@@ -1,122 +1,108 @@
-<head>
-  <style>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
-  </style>
+<!DOCTYPE html>
+<html>
+    <head>
+          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <style>
-    #logo{
-        height: 100px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+          <link rel="stylesheet" type="text/css" href="../../static/css/navbar.css">
+        
+        <style>
+            #services {
+              color: #4498BF;
+            }
+            
+            .heading{
+                text-align: center;
+                font-size: 50px;
+            }
+            
+            .column {
+            float: left;
+            width: 50%;
+            margin-left: 190px;
+            width: 35%;
+            height: 300px;
+            font-family: "Lato", sans-serif;
 
-    .navbar{
-        overflow: hidden;
-        background: white;
-        font-family: "Lato", sans-serif;
+            }
+            
+            .row{
+                margin: 0;
+            }
+            
+            #heading{
+                text-align: center;
+            }
+            
+            #icon{
+                height: 100px;
+                display: block;
+                margin: auto;
+            }
+            
+            #description{
+                text-align:center;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+            <hr/>
 
-    }
+    <div class="navbar">
+        <div id="items">
 
-    .navbar a{
-        float: right;
-        font: 20px;
-        color: #333;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin-right: 20px;
-        margin-left: 10px;
+            <button value="Pickup & Delivery" id="form_btn">PICKUP & DELIVERY</button>
 
-
-    }
-
-    .navbar a:hover{
-        text-decoration: underline;
-        text-decoration-color: #4498BF;
-    }
-
-    hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid rgba(204, 204, 204, 0.89);
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #services{
-        color:  #4498BF;
-    }
-
-    #form_btn{
-        float: right;
-        font: 20px;
-        color: #333;
-        text-align: center;
-        padding: 12px 14px;
-        border-style: none;
-        border-radius: 12px;
-        margin-left: 20px;
-        /*margin-bottom: 5px;*/
-        margin-right: 40px;
-        font-family: "Lato", sans-serif;
-        /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
-        background-color: #3FB72F;
-        color: whitesmoke;
-        font-weight: bold;
-    }
-
-    #form_btn:hover{
-        color: #3FB72F;
-        background-color: white;
-        border-style: solid;
-        border-color: #3FB72F;
-        padding: 10px 12px;
-    }
-
-    #logo2{
-        float: left;
-        height: 50px;
-        margin-left: 20px;
-        margin-right: 15px;
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <!--<div id= "top_logo">
-    <img id = logo src="logo2.png">
-  </div>-->
-
-  <hr/>
-
-  <div class = "navbar">
-      <div id="items">
-
-          <button value="Pickup & Delivery" id="form_btn">PICKUP & DELIVERY</button>
-
-          <img id="logo2" src="logo2.png">
-          <a id="contact">CONTACT US</a>
-          <a id="services">SERVICES</a>
-          <a id="home">HOME</a>
+            <img id="logo2" src="logo2.png">
+            <a id="contact">CONTACT US</a>
+            <a id="services">SERVICES</a>
+            <a id="home">HOME</a>
 
 
-      </div>
+        </div>
 
-  </div>
-
-
-
-</body>
+    </div>
+        
+        <p class="heading">Services</p>
+        
+        <div class="row">
+            <div class="column">
+                <h1 class="wash" id="heading">Wash</h1>
+                <br>
+                <img id = "icon" src="images/water_icon.png" align = "middle">
+                <br>
+                <p class="washText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div>
+            <div class="column">
+                <h1 class="dry" id="heading">Dry</h1>
+                <br>
+                <img id = "icon" src="images/dry_icon.png" align = "middle">
+                <br>
+                <p class="dryText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div> 
+        </div>
+        
+        <div class="row" style="margin-top: 50px;">
+            <div class="column">
+                <h1 class="fold" id="heading">Fold</h1>
+                <br>
+                <img id = "icon" src="images/fold_icon.png" align = "middle">
+                <br>
+                <p class="foldText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div>
+            <div class="column">
+                <h1 class="pickanddeliver" id="heading">Pickup & Deliver</h1>
+                <br>
+                <img id = "icon" src="images/delivery_icon.png" align = "middle">
+                <br>
+                <p class="deliverText" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin lacus eget sagittis tempor. Nullam non ante ligula. Aenean nibh leo, lobortis nec blandit id, mollis sed purus. </p>
+            </div> 
+        </div>
+    </body>
+</html>
