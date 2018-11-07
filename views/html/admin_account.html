@@ -44,6 +44,87 @@
             border-color: #3FB72F;
             padding: 10px 12px;
         }
+        
+        #header{
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .main-content{
+            margin-left: 50px;
+        }
+        
+        .registerBtn, .emailBtn, .passBtn, .resetBtn{
+            width: 300px;
+            height: 40px;
+            font-size: 23px;
+            text-align: center;
+            border-style: none;
+            border-radius: 12px;
+            font-family: "Lato", sans-serif;
+            /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
+            background-color: #3FB72F;
+            color: whitesmoke;
+            font-weight: bold;
+
+        }
+        
+        .registerBtn{
+            margin-bottom: 30px;
+        }
+        
+        .registerBtn:hover, .emailBtn:hover, .passBtn:hover, .resetBtn:hover{
+            color: #3FB72F;
+            background-color: white;
+            border-style: solid;
+            border-color: #3FB72F;
+        }
+        
+        .main .title{
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .main .email_field{
+         margin-top: 10px;
+         resize: none;
+         width: 250px;
+         font-size: 20px;
+         height: 35px;
+
+        }
+
+        .main .oldpass{
+          margin-top: 10px;
+          resize: none;
+            font-size: 20px;
+            height: 30px;
+        }
+
+        .main .newpass, .confirmpass{
+            margin-top: 15px;
+              resize: none;
+            font-size: 20px;
+            height: 30px;
+        }
+
+        .main .confirmpass{
+            margin-left: 10px;
+        }
+        
+        .emailBtn, .passBtn{
+            width: 250px;
+        }
+
+        .resetBtn{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            width: 250px;
+            height: 40px;
+        }
+        
     </style>
 	<body>
         <hr/>
@@ -64,25 +145,29 @@
             </div>
 
         </div>
-<!--
+        
 		<div class="main">
 			<div class="main-header">
 				<h1 id="header">Account</h1>
 			</div>
 		<hr>
+
             <div class="main-content">
-                <span class="title">Email</span><br>
-                <textarea class="email_field"></textarea><br>
-                <button class="emailBtn">UPDATE</button><br>
-                <span class="title">Change Password</span><br>
+                <a href="admin_addService.html"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
+
+                <p class="title">Email</p>
+                <textarea class="email_field"></textarea>
+                <button class="emailBtn">UPDATE</button>
+                <p class="title">Change Password</p>
                 <input type="password" placeholder="Old Password" class="oldpass"><br>
                 <input type="password" placeholder="New Password" class="newpass">
                 <input type="password" placeholder="Confirm Password" class="confirmpass"><br>
                 <button class="passBtn">UPDATE</button>
                 <button class="resetBtn">RESET</button>
                 <br>
+
             </div>
 		</div>
--->
+
 	<body>
 </html>
