@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. Klean Login</title>
+
+  <style>
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+
+    .primary-logo {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    .fields-container {
+      font-family: Helvetica, sans-serif;
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      max-width: 20rem;
+      padding: 2rem;
+
+      background-color: rgb(220,220,220);
+      border-radius: 1rem;
+    }
+
+    .fields-container div {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: .3rem;
+    }
+
+    .fields-container input {
+      font-size: 1rem;
+
+      margin: .3rem 0;
+      padding: .4rem .5rem;
+
+      border-radius: .4rem;
+      border-width: .1rem;
+      border-style: solid;
+
+      background-color: rgb(255,255,255);
+      border-color: rgba(100,100,100,.1);
+    }
+
+    .fields-container input[type=submit] {
+      background-color: rgba(100,100,100,.4);
+      border-color: rgba(100,100,100,.4);
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+
+    .fields-container input[type=submit]:hover {
+      border-color: rgb(75,75,75);
+      border-style: solid;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <img class="primary-logo" src="images/MRKLEANLOGO.png">
+    <div class="fields-container">
+      <div>Admin Panel</div>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <input type="submit" value="Login">
+    </div>
+  </div>
+</body>
+
+</html>
