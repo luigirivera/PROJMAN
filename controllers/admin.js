@@ -15,7 +15,11 @@ module.exports.controller = function (app) {
   })
 
   app.get('/admin', (req, res)=>{
-    res.redirect('admin_information.ejs')
+    res.redirect('/admin/info')
+  })
+
+  app.get('/admin/info', (req, res)=>{
+    res.render(path.join('admin', 'information.ejs'))
   })
 
 }
