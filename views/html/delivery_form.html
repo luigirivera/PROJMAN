@@ -193,7 +193,7 @@
             <form>
                 <input type="checkbox" name="fold_option" value="fold"> Fold<br>
                 <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option" onclick="displayDetergent()">Detergent<br>
-                <div id="detergent_list" >
+                <div id="detergent_list" style="display: none" >
                     <br><a>Ariel</a>
                     <input type="number" value="ariel_reg" min="0" style="width: 50px">
                     <br><a>Ariel with Passion</a>
@@ -218,7 +218,7 @@
             }
         }*/
 
-        $("#detergent_list").on("click", function() {
+        $("#detergent_option").on("click", function() {
             if ($("#detergent_list").is(":hidden")) {
                 $("#detergent_list").show();
             } else {
