@@ -2,6 +2,7 @@
   "port": 3000,
   "views": "views",
   "static": "static",
+  "key": "SAMPLE_KEY",
   "database": {
     "uri": "mongodb://localhost:27017/mrklean"
   }
