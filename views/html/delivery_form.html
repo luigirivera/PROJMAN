@@ -1,120 +1,232 @@
+<html>
 <head>
-  <style>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
-  </style>
+    <style>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+    </style>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <style>
-    #logo{
-        height: 100px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    .navbar{
-        overflow: hidden;
-        background: white;
-        font-family: "Lato", sans-serif;
+    <style>
+        #logo {
+            height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    }
+        .navbar {
+            overflow: hidden;
+            background: white;
+            font-family: "Lato", sans-serif;
 
-    .navbar a{
-        float: right;
-        font: 20px;
-        color: #333;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin-right: 20px;
-        margin-left: 10px;
+        }
 
-
-    }
-
-    .navbar a:hover{
-        text-decoration: underline;
-        text-decoration-color: #4498BF;
-    }
-
-    hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid rgba(204, 204, 204, 0.89);
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        margin-bottom: 10px;
-    }
+        .navbar a {
+            float: right;
+            font: 20px;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-right: 20px;
+            margin-left: 10px;
 
 
-    #form_btn{
-        float: right;
-        font: 20px;
-        color: #333;
-        text-align: center;
-        padding: 12px 14px;
-        border-style: none;
-        border-radius: 12px;
-        margin-left: 20px;
-        /*margin-bottom: 5px;*/
-        margin-right: 40px;
-        font-family: "Lato", sans-serif;
-        /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
-        background-color: #3FB72F;
-        color: whitesmoke;
-        font-weight: bold;
-    }
+        }
 
-    #form_btn:hover{
-        color: #3FB72F;
-        background-color: white;
-        border-style: solid;
-        border-color: #3FB72F;
-        padding: 10px 12px;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+            text-decoration-color: #4498BF;
+        }
 
-    #logo2{
-        float: left;
-        height: 50px;
-        margin-left: 20px;
-        margin-right: 15px;
-    }
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid rgba(204, 204, 204, 0.89);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-  </style>
+
+        #form_btn {
+            float: right;
+            font: 20px;
+            color: #333;
+            text-align: center;
+            padding: 12px 14px;
+            border-style: none;
+            border-radius: 12px;
+            margin-left: 20px;
+            /*margin-bottom: 5px;*/
+            margin-right: 40px;
+            font-family: "Lato", sans-serif;
+            /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
+            background-color: #3FB72F;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        #form_btn:hover {
+            color: #3FB72F;
+            background-color: white;
+            border-style: solid;
+            border-color: #3FB72F;
+            padding: 10px 12px;
+        }
+
+        #logo2 {
+            float: left;
+            height: 50px;
+            margin-left: 20px;
+            margin-right: 15px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        #header {
+            font-family: "Lato", sans-serif;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .forms-container {
+            font-family: Helvetica, sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            max-width: 20rem;
+            padding: 2rem;
+
+            background-color: rgb(220, 220, 220);
+            border-radius: 1rem;
+        }
+
+        .form-container div {
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: .3rem;
+
+
+        }
+
+        .form-container input {
+            font-size: 1rem;
+
+            margin: .3rem 0;
+
+            padding: .4rem .5rem;
+
+            border-radius: .4rem;
+            border-width: .1rem;
+            border-style: solid;
+
+            background-color: rgb(255, 255, 255);
+            border-color: rgba(100, 100, 100, .1);
+        }
+
+        .form-container a {
+            color: black;
+            text-decoration: none;
+
+        }
+    </style>
 
 </head>
 
 <body>
 
-  <!--<div id= "top_logo">
+    <!--<div id= "top_logo">
     <img id = logo src="logo2.png">
   </div>-->
 
-  <hr/>
+    <hr/>
 
-  <div class = "navbar">
-      <div id="items">
+    <div class="navbar">
+        <div id="items">
 
-          <button value="Pickup & Delivery" id="form_btn">PICKUP & DELIVERY</button>
+            <button value="Pickup & Delivery" id="form_btn">PICKUP & DELIVERY</button>
 
-          <img id="logo2" src="logo2.png">
-           
-          <a id="contact">CONTACT US</a>
-          <a id="services">SERVICES</a>
-          <a id="home">HOME</a>
+            <img id="logo2" src="logo2.png">
+
+            <a id="contact">CONTACT US</a>
+            <a id="services">SERVICES</a>
+            <a id="home">HOME</a>
 
 
-      </div>
+        </div>
 
-  </div>
+    </div>
 
+
+    <div class="main-container">
+        <h1 id="header">Pickup & Delivery Form</h1>
+
+
+        <div class="form-container">
+            <a>Name</a><br>
+            <input type="text" value="name">
+            <br><a>Address</a><br>
+            <input type="text" value="address" style="width: 250px">
+            <br><a>Contact No.</a><br>
+            <input type="tel" value="contact_no">
+            <h3 style="margin-top: 30px">Services</h3>
+            <br><a>Number of Wash Cycles</a><br>
+            <input type="number" value="wash_load" min="0" style="width: 50px">
+            <br><a>Number of Dry Cycles</a><br>
+            <input type="number" value="wash_load" min="0" style="width: 50px">
+            <form>
+                <input type="checkbox" name="fold_option" value="fold"> Fold<br>
+                <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option" onclick="displayDetergent()">Detergent<br>
+                <div id="detergent_list" >
+                    <br><a>Ariel</a>
+                    <input type="number" value="ariel_reg" min="0" style="width: 50px">
+                    <br><a>Ariel with Passion</a>
+                    <input type="number" value="ariel_passion" min="0" style="width: 50px">
+                    <br><a>Breeze</a>
+                    <input type="number" value="breeze" min="0" style="width: 50px">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        /*
+        function displayDetergent() {
+            var deterCheck = document.getElementById("detergent_option");
+            var deterList = document.getElementById("detergent_list");
+
+            if (deterCheck.checked == true) {
+                deterList.display = "block";
+            } else {
+                deterList.display = "none";
+            }
+        }*/
+
+        $("#detergent_list").on("click", function() {
+            if ($("#detergent_list").is(":hidden")) {
+                $("#detergent_list").show();
+            } else {
+                $("#detergent_list").hide();
+            }
+        });
+    </script>
 
 
 </body>
+</html>
