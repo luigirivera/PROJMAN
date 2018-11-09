@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports.controller = function (app) {
 
   app.all(/admin(\/.)*/, (req, res, next)=>{
@@ -8,7 +10,7 @@ module.exports.controller = function (app) {
     }
     else {
       console.log('No session found -- redirecting to login')
-      res.render('admin_login.ejs')
+      res.render(path.join('admin', 'login.ejs'))
     }
   })
 
