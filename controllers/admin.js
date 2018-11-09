@@ -4,7 +4,7 @@ module.exports.controller = function (app) {
 
   app.all(/admin(\/.)*/, (req, res, next)=>{
     console.log('Admin session check')
-    if (req.session.uid){
+    if (req.session && req.session.uid) {
       console.log('Session exists -- proceeding')
       next()
     }
