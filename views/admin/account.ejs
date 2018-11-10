@@ -24,10 +24,6 @@
             font-size: 50px;
         }
         
-        .main-content{
-            margin-left: 50px;
-        }
-        
         .registerBtn, .emailBtn, .passBtn, .resetBtn{
             width: 300px;
             height: 40px;
@@ -36,15 +32,10 @@
             border-style: none;
             border-radius: 12px;
             font-family: "Lato", sans-serif;
-/*            box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
             background-color: #3FB72F;
             color: whitesmoke;
             font-weight: bold;
 
-        }
-        
-        .registerBtn{
-            margin-bottom: 30px;
         }
         
         .registerBtn:hover, .emailBtn:hover, .passBtn:hover, .resetBtn:hover{
@@ -54,46 +45,44 @@
             border-color: #3FB72F;
         }
         
-        .main .title{
-            margin-top: 10px;
+        .title{
+            margin-top: 30px;
             font-weight: bold;
             font-size: 25px;
         }
 
-        .main .email_field{
+        .emailfield{
          resize: none;
-         width: 250px;
          font-size: 20px;
          height: 35px;
 
         }
 
-        .main .oldpass{
+        .oldpass{
           margin-top: 10px;
           resize: none;
             font-size: 20px;
             height: 30px;
         }
 
-        .main .newpass, .confirmpass{
+        .newpass, .confirmpass{
             margin-top: 15px;
-              resize: none;
             font-size: 20px;
             height: 30px;
         }
 
-        .main .confirmpass{
+        .confirmpass, .emailBtn{
             margin-left: 10px;
         }
         
-        .emailBtn, .passBtn{
+        .emailBtn, .passBtn, .oldpass, .newpass, .confirmpass, .emailfield{
             width: 250px;
         }
 
         .resetBtn{
             margin-top: 10px;
             margin-bottom: 20px;
-            margin-left: 5px;
+            margin-left: 10px;
             width: 250px;
             height: 40px;
         }
@@ -101,13 +90,13 @@
     </style>
 	<body>
         <%- include('admin_navbar.ejs') %>
-				<h1 id="header">Account</h1>
+        <h1 id="header">Account</h1>
 
             <div class="main">
                 <a href="admin_addService.html"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
                 <p class="title">Email</p>
                 <div class = "email">
-                    <input type = "text" class="email_field">
+                    <input type = "text" class="emailfield">
                     <button class="emailBtn">UPDATE</button>
                 </div>
                 <p class="title">Change Password</p>
