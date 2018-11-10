@@ -63,5 +63,15 @@ module.exports.controller = function (app) {
   app.get('/admin/services/add_service', (req, res)=>{
     console.log('GET /admin/addService')
     res.render(path.join('admin', 'addService.ejs'))
-  }) 
+  })
+    
+  app.get('/employee/orders', (req, res)=>{
+    console.log('GET /admin/employee/orders')
+    res.render(path.join('admin/employee', 'orders.ejs'))
+  })
+    
+  app.get('/employee/account', (req, res)=>{
+    console.log('GET /admin/employee/account')
+    res.render(path.join('admin/employee', 'account.ejs'))
+  })
 }
