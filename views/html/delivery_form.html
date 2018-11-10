@@ -100,7 +100,7 @@
         #header {
             font-family: "Lato", sans-serif;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .forms-container {
@@ -145,6 +145,51 @@
             text-decoration: none;
 
         }
+        
+        .options{
+            font-weight: normal;
+            font-size: 13px;
+            margin-top: 1px;
+        }
+        
+        #submit_btn {
+            font: 70px;
+            color: #333;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            font-family: "Lato", sans-serif;
+            /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
+            background-color: #3FB72F;
+            color: whitesmoke;
+            border-style: solid;
+            font-weight: bold;
+            
+        }
+
+        #submit_btn:hover {
+            color: #3FB72F;
+            background-color: white;
+            border-style: solid;
+            border-color: #3FB72F;
+            padding: 10px 15px;
+        }
+        
+        #detergent_list{
+            margin-left: 15px;
+            display: none;
+        }
+        
+        #softener_list{
+            margin-left: 15px;
+            display: none;
+        }
+        
+        #bleach_list{
+            margin-left: 15px;
+            display: none;
+        }
     </style>
 
 </head>
@@ -179,29 +224,54 @@
 
 
         <div class="form-container">
+            <h3 style="margin-top: 10px">Contact Details</h3>
             <a>Name</a><br>
             <input type="text" value="name">
             <br><a>Address</a><br>
             <input type="text" value="address" style="width: 250px">
             <br><a>Contact No.</a><br>
             <input type="tel" value="contact_no">
-            <h3 style="margin-top: 30px">Services</h3>
-            <br><a>Number of Wash Cycles</a><br>
-            <input type="number" value="wash_load" min="0" style="width: 50px">
+            <h3 style="margin-top: 20px">Services</h3>
+            <a>Number of Wash Cycles</a><br>
+            <input type="number" value="wash_load" min="0" style="width: 40px">
             <br><a>Number of Dry Cycles</a><br>
-            <input type="number" value="wash_load" min="0" style="width: 50px">
+            <input type="number" value="wash_load" min="0" style="width: 40px">
             <form>
-                <input type="checkbox" name="fold_option" value="fold"> Fold<br>
-                <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option" onclick="displayDetergent()">Detergent<br>
-                <div id="detergent_list" style="display: none" >
-                    <br><a>Ariel</a>
-                    <input type="number" value="ariel_reg" min="0" style="width: 50px">
-                    <br><a>Ariel with Passion</a>
-                    <input type="number" value="ariel_passion" min="0" style="width: 50px">
-                    <br><a>Breeze</a>
-                    <input type="number" value="breeze" min="0" style="width: 50px">
+                <input type="checkbox" name="pickup_option" value="pickup">Pick Up<br>
+                <input type="checkbox" name="fold_option" value="fold">Fold<br>
+                
+                <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option">Detergent
+                <div id="detergent_list" >
+                    <br><a class="options">Ariel</a>
+                    <input type="number" value="ariel_reg" min="0" style="width: 40px">
+                    <br><a class="options">Ariel with Passion</a>
+                    <input type="number" value="ariel_passion" min="0" style="width: 40px">
+                    <br><a class="options">Breeze</a>
+                    <input type="number" value="breeze" min="0" style="width: 40px">
                 </div>
+                
+                <br><input type="checkbox" name="softener_option" value="softener" id="softener_option">Fabric Softener<br>
+                <div id="softener_list" style="display: none" >
+                    <br><a class="options">Downy Regular</a>
+                    <input type="number" value="downy_reg" min="0" style="width: 40px">
+                    <br><a class="options">Downy Mystique</a>
+                    <input type="number" value="downy_myst" min="0" style="width: 40px">
+                    <br><a class="options">Champion</a>
+                    <input type="number" value="champion" min="0" style="width: 40px">
+                </div>
+                
+                <input type="checkbox" name="bleach_option" value="bleach" id="bleach_option">Bleach<br>
+                <div id="bleach_list" style="display: none" >
+                    <br><a class="options">Zonrox Color Safe</a>
+                    <input type="number" value="zonrox" min="0" style="width: 40px">
+                </div>
+                
+                <input type="checkbox" name="plastic_option" value="plastic_bag" id="plastic_option" style="margin-top: 10px; margin-bottom: 15px;">Plastic Bag
+                    <input type="number" value="plastic" min="0" style="width: 40px; display: none"  id="plastic_bag">
             </form>
+            
+            <h4 style="margin-top: 40px;">Estimated Price: </h4>
+            <input type="SUBMIT" id = "submit_btn" value="SUBMIT">
         </div>
     </div>
 
@@ -223,6 +293,30 @@
                 $("#detergent_list").show();
             } else {
                 $("#detergent_list").hide();
+            }
+        });
+        
+        $("#softener_option").on("click", function() {
+            if ($("#softener_list").is(":hidden")) {
+                $("#softener_list").show();
+            } else {
+                $("#softener_list").hide();
+            }
+        });
+        
+        $("#bleach_option").on("click", function() {
+            if ($("#bleach_list").is(":hidden")) {
+                $("#bleach_list").show();
+            } else {
+                $("#bleach_list").hide();
+            }
+        });
+        
+        $("#plastic_option").on("click", function() {
+            if ($("#plastic_bag").is(":hidden")) {
+                $("#plastic_bag").show();
+            } else {
+                $("#plastic_bag").hide();
             }
         });
     </script>
