@@ -62,6 +62,16 @@
                 border-style: solid;
                 border-color: #3FB72F;
             }
+            
+            table, th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align:center;
+            }
+            
+            th{
+                background-color: lightgray;
+            }
         </style>
 	</head>
     
@@ -71,6 +81,15 @@
         <h1 id="header">Services</h1>
         <div class="main">
             <a href="/admin/services/add_service"><button class="addBtn">ADD</button></a>
+            
+            <table style="width: 100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Rate</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
