@@ -39,7 +39,52 @@
                 border-style: solid;
                 border-color: #3FB72F;
                 padding: 10px 12px;
-            }       
+            }
+            
+            .name_field, .price_field, .rate_field{
+                margin-bottom: 20px;
+                resize: none;
+                font-size: 20px;
+                height: 35px;
+                width: 205px;
+            }
+
+            .title{
+                font-weight: bold;
+                font-size: 30px;
+            }
+            
+            .addBtn{
+                width: 205px;
+                height: 40px;
+                font-size: 23px;
+                text-align: center;
+                border-style: none;
+                border-radius: 12px;
+                font-family: "Lato", sans-serif;
+                background-color: #3FB72F;
+                color: whitesmoke;
+                font-weight: bold;
+
+            }
+
+            .addBtn:hover{
+                color: #3FB72F;
+                background-color: white;
+                border-style: solid;
+                border-color: #3FB72F;
+            }
+            
+            .column {
+                float: left;
+                height: auto;
+                width: auto;
+                font-family: "Lato", sans-serif;
+            }
+
+            .row{
+                margin: 0;
+            }
         </style>
 	</head>
     
@@ -47,6 +92,25 @@
         <%- include('admin_navbar.ejs') %>
         <h1 id="header">Add Service</h1>
         <div class="main">
+            <p class="title">Name</p>
+            <input type="text" class="name_field" placeholder="Name of Service">
+            <div class="row">
+                <div class="column">
+                    <p class="title">Price</p>
+                    <input type="text" class="price_field" placeholder="Fee">
+                </div>
+                <div class="column" style="margin-left: 20px;">
+                    <p class="title">Rate</p>
+                    <input type="text" class="rate_field" placeholder="Amount">
+                </div>
+                <div class="column" style="margin-left: 20px;">
+                    <p class="title">Unit</p>
+                    <select>
+                        <option value="N/A">N/A</option>
+                    </select>
+                </div>
+            </div>
+            <button class="addBtn">ADD</button>
         </div>
     </body>
 </html>
