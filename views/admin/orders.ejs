@@ -40,6 +40,16 @@
                 border-style: solid;
                 border-color: #3FB72F;
             }
+            
+            table, th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align:center;
+            }
+            
+            th{
+                background-color: lightgray;
+            }
         </style>
         
 	</head>
@@ -48,7 +58,17 @@
 	<body>
         <%- include('admin_navbar.ejs') %>
         <h1 id="header">Orders</h1>
-        <div class="main">
+        <div class="main"> 
+           <table style="width: 100%">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date Received</th>
+                    <th>Description</th>
+                    <th>Subtotal</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
