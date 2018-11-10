@@ -12,102 +12,99 @@
         
         <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
 		<link rel="stylesheet" href="/css/admin/content.css">
+        
+       <style>
+            #account{
+                color: #4498BF;
+            }
+
+            .registerBtn, .emailBtn, .passBtn, .resetBtn{
+                width: 300px;
+                height: 40px;
+                font-size: 23px;
+                text-align: center;
+                border-style: none;
+                border-radius: 12px;
+                font-family: "Lato", sans-serif;
+                background-color: #3FB72F;
+                color: whitesmoke;
+                font-weight: bold;
+
+            }
+
+            .registerBtn:hover, .emailBtn:hover, .passBtn:hover, .resetBtn:hover{
+                color: #3FB72F;
+                background-color: white;
+                border-style: solid;
+                border-color: #3FB72F;
+            }
+
+            .title{
+                margin-top: 30px;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+            .emailfield{
+             resize: none;
+             font-size: 20px;
+             height: 35px;
+
+            }
+
+            .oldpass{
+              margin-top: 10px;
+              resize: none;
+                font-size: 20px;
+                height: 30px;
+            }
+
+            .newpass, .confirmpass{
+                margin-top: 15px;
+                font-size: 20px;
+                height: 30px;
+            }
+
+            .confirmpass, .emailBtn{
+                margin-left: 10px;
+            }
+
+            .emailBtn, .passBtn, .oldpass, .newpass, .confirmpass, .emailfield{
+                width: 250px;
+            }
+
+            .resetBtn{
+                margin-top: 10px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                width: 250px;
+                height: 40px;
+            }
+
+        </style>
 	</head>
     
-    <style>
-        #account{
-            color: #4498BF;
-        }
-        
-        #header{
-            text-align: center;
-            font-size: 50px;
-        }
-        
-        .registerBtn, .emailBtn, .passBtn, .resetBtn{
-            width: 300px;
-            height: 40px;
-            font-size: 23px;
-            text-align: center;
-            border-style: none;
-            border-radius: 12px;
-            font-family: "Lato", sans-serif;
-            background-color: #3FB72F;
-            color: whitesmoke;
-            font-weight: bold;
-
-        }
-        
-        .registerBtn:hover, .emailBtn:hover, .passBtn:hover, .resetBtn:hover{
-            color: #3FB72F;
-            background-color: white;
-            border-style: solid;
-            border-color: #3FB72F;
-        }
-        
-        .title{
-            margin-top: 30px;
-            font-weight: bold;
-            font-size: 25px;
-        }
-
-        .emailfield{
-         resize: none;
-         font-size: 20px;
-         height: 35px;
-
-        }
-
-        .oldpass{
-          margin-top: 10px;
-          resize: none;
-            font-size: 20px;
-            height: 30px;
-        }
-
-        .newpass, .confirmpass{
-            margin-top: 15px;
-            font-size: 20px;
-            height: 30px;
-        }
-
-        .confirmpass, .emailBtn{
-            margin-left: 10px;
-        }
-        
-        .emailBtn, .passBtn, .oldpass, .newpass, .confirmpass, .emailfield{
-            width: 250px;
-        }
-
-        .resetBtn{
-            margin-top: 10px;
-            margin-bottom: 20px;
-            margin-left: 10px;
-            width: 250px;
-            height: 40px;
-        }
-        
-    </style>
+ 
 	<body>
         <%- include('admin_navbar.ejs') %>
         <h1 id="header">Account</h1>
 
-            <div class="main">
-                <a href="admin_addService.html"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
-                <p class="title">Email</p>
-                <div class = "email">
-                    <input type = "text" class="emailfield">
-                    <button class="emailBtn">UPDATE</button>
-                </div>
-                <p class="title">Change Password</p>
-                <input type="password" placeholder="Old Password" class="oldpass"><br>
-                <input type="password" placeholder="New Password" class="newpass">
-                <input type="password" placeholder="Confirm Password" class="confirmpass"><br>
-                <button class="passBtn">UPDATE</button>
-                <button class="resetBtn">RESET</button>
-                <br>
-
+        <div class="main">
+            <a href="admin_addService.html"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
+            <p class="title">Email</p>
+            <div class = "email">
+                <input type = "text" class="emailfield">
+                <button class="emailBtn">UPDATE</button>
             </div>
+            <p class="title">Change Password</p>
+            <input type="password" placeholder="Old Password" class="oldpass"><br>
+            <input type="password" placeholder="New Password" class="newpass">
+            <input type="password" placeholder="Confirm Password" class="confirmpass"><br>
+            <button class="passBtn">UPDATE</button>
+            <button class="resetBtn">RESET</button>
+            <br>
+
+        </div>
 
     </body>
 </html>

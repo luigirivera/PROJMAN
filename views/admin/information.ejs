@@ -18,13 +18,6 @@
             color: #4498BF;
         }
         
-        #header{
-            font-family: "Lato", sans-serif;
-            text-align: center;
-            font-size: 50px;
-            font-weight: bold;
-        }
-        
         .title{
             margin-top: 10px;
             font-weight: bold;
@@ -91,27 +84,27 @@
     
 
 	<body>
-    <%- include('admin_navbar.ejs') %>
+        <%- include('admin_navbar.ejs') %>
         <h1 id="header">Information</h1>
-			<div class="main">
-                <p class = "title">Description</p>
-				<textarea class = "descriptionField"></textarea><br><br>
-                <div class="row">
-                    <div class="column">
-                        <p class = "title">Contact</p>
-				        <textarea class = "contactField"></textarea><br><br>
-                    </div>
-                    <div class="column">
-                        <p class = "title">Location</p>
-				        <input type="text" class = "locationField"><br>
-                    </div>
-                    <div class="column">
-                        <p class = "title">Email</p>
-				        <input type="text" class = "emailField"><br>
-                    </div>
+        <div class="main">
+            <p class = "title">Description</p>
+            <textarea class = "descriptionField"></textarea><br><br>
+            <div class="row">
+                <div class="column">
+                    <p class = "title">Contact</p>
+                    <textarea class = "contactField"></textarea><br><br>
                 </div>
-				
-                <button class="updateBtn">UPDATE</button>
-			</div>
+                <div class="column">
+                    <p class = "title">Location</p>
+                    <input type="text" class = "locationField"><br>
+                </div>
+                <div class="column">
+                    <p class = "title">Email</p>
+                    <input type="text" class = "emailField"><br>
+                </div>
+            </div>
+
+            <button class="updateBtn">UPDATE</button>
+        </div>
     </body>
 </html>

@@ -11,64 +11,66 @@
         
         <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
 		<link rel="stylesheet" href="/css/admin/content.css">
+        
+        <style>
+            #services{
+                color: #4498BF;
+            }
+
+            #logOut_btn{
+                float: right;
+                font: 20px;
+                color: #333;
+                text-align: center;
+                padding: 12px 14px;
+                border-style: none;
+                border-radius: 12px;
+                margin-left: 20px;
+                margin-right: 40px;
+                font-family: "Lato", sans-serif;
+                background-color: #3FB72F;
+                color: whitesmoke;
+                font-weight: bold;
+            }
+
+            #logOut_btn:hover{
+                color: #3FB72F;
+                background-color: white;
+                border-style: solid;
+                border-color: #3FB72F;
+                padding: 10px 12px;
+            }
+
+            .addBtn{
+                margin-bottom: 20px;
+                width: 100px;
+                height: 40px;
+                font-size: 23px;
+                text-align: center;
+                border-style: none;
+                border-radius: 12px;
+                font-family: "Lato", sans-serif;
+                background-color: #3FB72F;
+                color: whitesmoke;
+                font-weight: bold;
+
+            }
+
+            .addBtn:hover{
+                color: #3FB72F;
+                background-color: white;
+                border-style: solid;
+                border-color: #3FB72F;
+            }
+        </style>
 	</head>
     
-    <style>
-        #services{
-            color: #4498BF;
-        }
-        
-        #logOut_btn{
-            float: right;
-            font: 20px;
-            color: #333;
-            text-align: center;
-            padding: 12px 14px;
-            border-style: none;
-            border-radius: 12px;
-            margin-left: 20px;
-            margin-right: 40px;
-            font-family: "Lato", sans-serif;
-            background-color: #3FB72F;
-            color: whitesmoke;
-            font-weight: bold;
-        }
-
-        #logOut_btn:hover{
-            color: #3FB72F;
-            background-color: white;
-            border-style: solid;
-            border-color: #3FB72F;
-            padding: 10px 12px;
-        }
-        
-        .addBtn{
-            margin-bottom: 20px;
-            width: 100px;
-            height: 40px;
-            font-size: 23px;
-            text-align: center;
-            border-style: none;
-            border-radius: 12px;
-            font-family: "Lato", sans-serif;
-            background-color: #3FB72F;
-            color: whitesmoke;
-            font-weight: bold;
-
-        }
-        
-        .addBtn:hover{
-            color: #3FB72F;
-            background-color: white;
-            border-style: solid;
-            border-color: #3FB72F;
-        }
-    </style>
+ 
 	<body>
         <%- include('admin_navbar.ejs') %>
-				<h1 id="header">Services</h1>
-            <div class="main">
-                <a href="admin_addService.html"><button class="addBtn">ADD</button></a>
-            </div>
+        <h1 id="header">Services</h1>
+        <div class="main">
+            <a href="/admin/addService"><button class="addBtn">ADD</button></a>
+        </div>
     </body>
 </html>
