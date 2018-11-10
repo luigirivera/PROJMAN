@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Admin - Information</title>
-        
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-        <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
-		<link rel="stylesheet" href="/css/admin/content.css">
-        
+
+<head>
+    <title>Admin - Site Information</title>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
+    <link rel="stylesheet" href="/css/admin/content.css">
+
     <style>
         #information{
             color: #4498BF;
@@ -20,26 +21,30 @@
         
         .title{
             margin-top: 10px;
+            margin-bottom: 0;
             font-weight: bold;
             font-size: 25px;
         }
         
         .main{
             margin-right: 50px;
+            width: 50%;
+            margin: 0 auto;
         }
         
         .descriptionField{
           margin-top: 10px;
           resize: none;
           width: 100%;
-          height: 100px;
+          height: 300px;
         }
 
         .contactField, .emailField, .locationField{
-            margin-top: 10px;
+            /* margin-top: 10px; */
             resize: none;
             font-size: 20px;
             height: 35px;
+            width: 33%;
         }
         
         .column {
@@ -66,6 +71,7 @@
             background-color: #3FB72F;
             color: whitesmoke;
             font-weight: bold;
+            margin-bottom: 20px;
         }
         
         .updateBtn:hover{
@@ -76,31 +82,33 @@
         }
         
     </style>
-	</head>
-    
+</head>
 
-	<body>
-        <%- include('admin_navbar.ejs') %>
-        <h1 id="header">Information</h1>
-        <div class="main">
-            <p class = "title">Description</p>
-            <textarea class = "descriptionField"></textarea><br><br>
-            <div class="row">
-                <div class="column">
-                    <p class = "title">Contact</p>
-                    <textarea class = "contactField"></textarea><br><br>
-                </div>
-                <div class="column">
-                    <p class = "title">Location</p>
-                    <input type="text" class = "locationField"><br>
-                </div>
-                <div class="column">
-                    <p class = "title">Email</p>
-                    <input type="text" class = "emailField"><br>
-                </div>
-            </div>
 
-            <button class="updateBtn">UPDATE</button>
-        </div>
-    </body>
+<body>
+    <%- include('admin_navbar.ejs') %>
+
+    <h1 id="header">Site Information</h1>
+
+    <div class="main">
+        <p class="title">Site Description</p>
+        <textarea class="descriptionField"></textarea><br><br>
+
+                <p class="title">Contact Number</p>
+                <input type="text" class="contactField"><br><br>
+
+            
+                <p class="title">Location</p>
+                <input type="text" class="locationField"><br><br>
+            
+            
+                <p class="title">Email</p>
+                <input type="text" class="emailField"><br><br>
+
+
+        <button class="updateBtn">UPDATE</button>
+    </div>
+
+</body>
+
 </html>
