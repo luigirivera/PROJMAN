@@ -40,8 +40,26 @@
                 padding: 10px 12px;
             }
             
-            .main-content{
-                margin-left: 50px;
+            .addBtn{
+                margin-bottom: 20px;
+                width: 100px;
+                height: 40px;
+                font-size: 23px;
+                text-align: center;
+                border-style: none;
+                border-radius: 12px;
+                font-family: "Lato", sans-serif;
+                background-color: #3FB72F;
+                color: whitesmoke;
+                font-weight: bold;
+
+            }
+
+            .addBtn:hover{
+                color: #3FB72F;
+                background-color: white;
+                border-style: solid;
+                border-color: #3FB72F;
             }
         </style>
     </head>
@@ -49,6 +67,7 @@
         <%- include('admin_navbar.ejs') %>
         <h1 id="header">Promos</h1>
         <div class="main">
+            <a href="/admin/promos/add_promo"><button class="addBtn">ADD</button></a>
         </div>
     </body>
 </html>
