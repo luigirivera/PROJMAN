@@ -87,6 +87,12 @@
             .row{
                 margin: 0;
             }
+           
+           .register{
+               width: auto;
+               height: auto;
+               display:none;
+           }
 
         </style>
 	</head>
@@ -97,7 +103,24 @@
         <h1 id="header">Account</h1>
 
         <div class="main">
-            <a href="admin_addService.html"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
+            <div class="row">
+                <div class="column">
+                    <a href="#"><button class="registerBtn">REGISTER EMPLOYEE</button></a> 
+                </div>
+                <div class="register">
+                    <div class="column" style="margin-left: 20px;">
+                        <p class="title" style="margin-top: 0px;">Username</p>
+                        <input type = "text" class="usernameField">
+                    </div>
+                    <div class="column" style="margin-left: 20px;">
+                        <p class="title" style="margin-top: 0px;">Email</p>
+                        <input type = "text" class="emailfield">
+                    </div>
+                    <div class="column" style="margin-left: 20px;">
+                        <button class="registerBtn">SAVE</button>
+                    </div>
+                </div>
+            </div>
             <%- include('accountcontent.ejs') %>
 
         </div>
