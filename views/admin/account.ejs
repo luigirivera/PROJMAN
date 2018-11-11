@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<title>Admin - Account</title>
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-        <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
-		<link rel="stylesheet" href="/css/admin/content.css">
-        
-       <style>
-            #account{
+<head>
+    <title>Admin - Account</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/admin/navbar.css">
+    <link rel="stylesheet" href="/css/admin/content.css">
+
+    <style>
+        #account{
                 color: #4498BF;
             }
 
@@ -93,37 +94,38 @@
                height: auto;
                display:none;
            }
-
+          
         </style>
-	</head>
-    
- 
-	<body>
-        <%- include('admin_navbar.ejs') %>
-        <h1 id="header">Account</h1>
+</head>
 
-        <div class="main">
-            <div class="row">
-                <div class="column">
-                    <a href="#"><button class="registerBtn">REGISTER EMPLOYEE</button></a> 
+
+<body>
+    <%- include('admin_navbar.ejs') %>
+    <h1 id="header">Account</h1>
+
+    <div class="main">
+        <div class="row">
+            <div class="column">
+                <a href="#"><button class="registerBtn">REGISTER EMPLOYEE</button></a>
+            </div>
+            <div class="register">
+                <div class="column" style="margin-left: 20px;">
+                    <p class="title" style="margin-top: 0px;">Username</p>
+                    <input type="text" class="usernameField">
                 </div>
-                <div class="register">
-                    <div class="column" style="margin-left: 20px;">
-                        <p class="title" style="margin-top: 0px;">Username</p>
-                        <input type = "text" class="usernameField">
-                    </div>
-                    <div class="column" style="margin-left: 20px;">
-                        <p class="title" style="margin-top: 0px;">Email</p>
-                        <input type = "text" class="emailfield">
-                    </div>
-                    <div class="column" style="margin-left: 20px;">
-                        <button class="registerBtn">SAVE</button>
-                    </div>
+                <div class="column" style="margin-left: 20px;">
+                    <p class="title" style="margin-top: 0px;">Email</p>
+                    <input type="text" class="emailfield">
+                </div>
+                <div class="column" style="margin-left: 20px;">
+                    <button class="registerBtn">SAVE</button>
                 </div>
             </div>
-            <%- include('accountcontent.ejs') %>
-
         </div>
+        <%- include('accountcontent.ejs') %>
 
-    </body>
+    </div>
+
+</body>
+
 </html>
