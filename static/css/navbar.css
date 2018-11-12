@@ -38,8 +38,9 @@ hr {
     font: 20px;
     color: #333;
     text-align: center;
-    padding: 12px 14px;
-    border-style: none;
+    padding: 10px 12px;
+    border-style: solid;
+    border-color: #3FB72F;
     border-radius: 12px;
     margin-left: 20px;
     /*margin-bottom: 5px;*/
@@ -54,9 +55,6 @@ hr {
 #form_btn:hover{
     color: #3FB72F;
     background-color: white;
-    border-style: solid;
-    border-color: #3FB72F;
-    padding: 10px 12px;
 }
 
 #logo{
