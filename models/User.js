@@ -21,6 +21,11 @@ var userSchema = mongoose.Schema({
   password : {
     type : String,
     required : true,
+  },
+  type : {
+    type : mongoose.Schema.Types.ObjectId,
+    ref : "user_type",
+    required : true
   }
 })
 
