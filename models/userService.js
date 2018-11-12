@@ -29,11 +29,37 @@ function getByUsername(username) {
       .catch((err)=>{
         reject(err)
       })
-      // collation
+    }
+  )
+}
+
+/*
+  Creates a new User.
+  @param {String} username
+  @param {String} password
+  @param {UserType} type
+*/
+function createUser(username, password, type) {
+  return new Promise(
+    function(resolve, reject) {
+      let user = new User({
+        username, password, type : type._id
+      })
+
+      user.save()
+      .then((savedUser)=>{
+        return savedUser.populate('type').execPopulate()
+      })
+      .then((savedUser)=>{
+        resolve(savedUser)
+      })
+      .catch((err)=>{
+        reject(err)
+      })
     }
   )
 }
 
 module.exports = {
-  getAll, getByUsername
+  getAll, getByUsername, createUser
 }
