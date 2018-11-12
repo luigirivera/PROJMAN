@@ -22,7 +22,6 @@ function getByUsername(username) {
   return new Promise(
     function(resolve, reject) {
       User.findOne({username}, 'username')
-      .collation({ locale : 'en_US', strength : 1 })
       .populate('type')
       .then((user)=>{
         if (user) resolve(user)

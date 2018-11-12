@@ -27,7 +27,7 @@ var userSchema = mongoose.Schema({
     ref : "user_type",
     required : true
   }
-})
+}, { collation : { locale : 'en_US', strength : 1 }})
 
 userSchema.pre('save', function(next){
   let user = this
