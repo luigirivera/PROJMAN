@@ -115,12 +115,14 @@
 
             background-color: rgb(220, 220, 220);
             border-radius: 1rem;
+            
         }
 
         .form-container div {
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: .3rem;
+            column-count: 2;
 
 
         }
@@ -137,7 +139,7 @@
             border-style: solid;
 
             background-color: rgb(255, 255, 255);
-            border-color: rgba(100, 100, 100, .1);
+            border-color: 	#47A0BC;
         }
 
         .form-container a {
@@ -145,27 +147,30 @@
             text-decoration: none;
 
         }
-        
-        .options{
+
+
+
+        .options {
             font-weight: normal;
             font-size: 13px;
             margin-top: 1px;
         }
-        
+
         #submit_btn {
-            font: 70px;
+            font-size: 20px;
             color: #333;
             text-align: center;
             padding: 10px 15px;
             border-radius: 12px;
-            margin-bottom: 35px;
+            /*margin-bottom: 20px;*/
+            margin-top: 30px;
             font-family: "Lato", sans-serif;
             /*box-shadow: 2px 2px rgba(165, 158, 158, 0.85);*/
             background-color: #3FB72F;
             color: whitesmoke;
             border-style: solid;
             font-weight: bold;
-            
+
         }
 
         #submit_btn:hover {
@@ -175,21 +180,38 @@
             border-color: #3FB72F;
             padding: 10px 15px;
         }
-        
-        #detergent_list{
-            margin-left: 15px;
+
+        #detergent_list {
+            margin-left: 25px;
             display: none;
         }
-        
-        #softener_list{
-            margin-left: 15px;
+
+        #softener_list {
+            margin-left: 25px;
             display: none;
         }
-        
-        #bleach_list{
-            margin-left: 15px;
+
+        #bleach_list {
+            margin-left: 25px;
             display: none;
         }
+
+        .form-container input[type=checkbox] {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        #row {
+            display: flex;
+            height: 500px;
+        }
+
+        #column {
+            flex: 100%;
+            padding: 10px;
+
+        }
+        
     </style>
 
 </head>
@@ -223,70 +245,101 @@
         <h1 id="header">Pickup & Delivery Form</h1>
 
 
-        <div class="form-container">
-            <h3 style="margin-top: 10px">Contact Details</h3>
-            <a>Name</a><br>
-            <input type="text" value="name">
-            <br><a>Address</a><br>
-            <input type="text" value="address" style="width: 250px">
-            <br><a>Contact No.</a><br>
-            <input type="tel" value="contact_no">
-            <h3 style="margin-top: 20px">Services</h3>
-            <a>Number of Wash Cycles</a><br>
-            <input type="number" value="wash_load" min="0" style="width: 40px">
-            <br><a>Number of Dry Cycles</a><br>
-            <input type="number" value="wash_load" min="0" style="width: 40px">
+        <div class="form-container" id="row">
             <form>
-                <input type="checkbox" name="pickup_option" value="pickup">Pick Up<br>
-                <input type="checkbox" name="fold_option" value="fold">Fold<br>
-                
-                <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option">Detergent
-                <div id="detergent_list" >
-                    <br><a class="options">Ariel</a>
-                    <input type="number" value="ariel_reg" min="0" style="width: 40px">
-                    <br><a class="options">Ariel with Passion</a>
-                    <input type="number" value="ariel_passion" min="0" style="width: 40px">
-                    <br><a class="options">Breeze</a>
-                    <input type="number" value="breeze" min="0" style="width: 40px">
+
+                <div id="column">
+                    <h3 style="margin-top: 10px">Contact Details</h3>
+                    <br>
+                    <a>Name</a><br>
+                    <input type="text" name="name" required>
+                    <br><a>Address</a><br>
+                    <input type="text" name="address" style="width: 250px" required>
+                    <br><a>Contact No.</a><br>
+                    <input type="tel" name="contact_no" required>
+                    <br>
+                    <br>
+                    <h3 style="margin-top: 20px">Services</h3>
+
+                    <input type="checkbox" name="pickup_option" value="pickup" style="color: grey" checked disabled>*Pickup
+                    <p style="color: red; font-size: 1rem; margin-left: 13px;">Service included</p>
+                    <input type="checkbox" name="delivery_option" value="delivery">Delivery<br>
+
+                    <a>Number of Wash Cycles</a>
+                    <input type="number" value="wash_load" min="0" style="width: 40px">
+                    <br><a>Number of Dry Cycles</a>
+                    <input type="number" value="wash_load" min="0" style="width: 40px">
+
+                    <br><input type="checkbox" name="fold_option" value="fold">Fold<br>
+
+
+                    <input type="checkbox" name="detergent_option" value="detergent" id="detergent_option">Detergent
+                    <div id="detergent_list">
+                        <ul>
+                            <li><a class="options">Ariel</a>
+                            <input type="number" value="ariel_reg" min="0" style="width: 40px"></li>
+                            <li><a class="options">Ariel with Passion</a>
+                            <input type="number" value="ariel_passion" min="0" style="width: 40px"></li>
+                            <li><a class="options">Breeze</a>
+                            <input type="number" value="breeze" min="0" style="width: 40px"></li>
+                            
+                        </ul>
+
+                    </div>
+
+                    <br><input type="checkbox" name="softener_option" value="softener" id="softener_option">Fabric Softener<br>
+                    <div id="softener_list">
+                        <ul>
+                            <li><a class="options">Downy Regular</a>
+                        <input type="number" value="downy_reg" min="0" style="width: 40px"></li>
+                            <li><a class="options">Downy Mystique</a>
+                        <input type="number" value="downy_myst" min="0" style="width: 40px"></li>
+                            <li><a class="options">Champion</a>
+                        <input type="number" value="champion" min="0" style="width: 40px"><br></li>
+                        </ul>
+                        
+                        
+                        
+                    </div>
+
+                    <input type="checkbox" name="bleach_option" value="bleach" id="bleach_option">Bleach<br>
+                    <div id="bleach_list">
+                        <ul>
+                        <li><a class="options">Zonrox Color Safe</a>
+                        <input type="number" value="zonrox" min="0" style="width: 40px"></li>
+                        </ul>
+                        
+                    </div>
+
+                    <input type="checkbox" name="plastic_option" value="plastic_bag" id="plastic_option" style="margin-top: 10px; margin-bottom: 15px;">Plastic Bag
+                    <input type="number" value="plastic" min="0" style="width: 40px; display: none" id="plastic_bag">
+                    <h4 style="margin-top: 30px;">*Estimated Price: P200.00</h4>
+                    <a style="color: red;font-size: 1rem">Minimum cost SHOULD reach P200.00 to avail for pickup & delivery services</a>
+
+                    <br><input type="SUBMIT" id="submit_btn" value="SUBMIT">
                 </div>
-                
-                <br><input type="checkbox" name="softener_option" value="softener" id="softener_option">Fabric Softener<br>
-                <div id="softener_list" style="display: none" >
-                    <br><a class="options">Downy Regular</a>
-                    <input type="number" value="downy_reg" min="0" style="width: 40px">
-                    <br><a class="options">Downy Mystique</a>
-                    <input type="number" value="downy_myst" min="0" style="width: 40px">
-                    <br><a class="options">Champion</a>
-                    <input type="number" value="champion" min="0" style="width: 40px">
-                </div>
-                
-                <input type="checkbox" name="bleach_option" value="bleach" id="bleach_option">Bleach<br>
-                <div id="bleach_list" style="display: none" >
-                    <br><a class="options">Zonrox Color Safe</a>
-                    <input type="number" value="zonrox" min="0" style="width: 40px">
-                </div>
-                
-                <input type="checkbox" name="plastic_option" value="plastic_bag" id="plastic_option" style="margin-top: 10px; margin-bottom: 15px;">Plastic Bag
-                    <input type="number" value="plastic" min="0" style="width: 40px; display: none"  id="plastic_bag">
+
+
+
+
             </form>
-            
-            <h4 style="margin-top: 40px;">Estimated Price: </h4>
-            <input type="SUBMIT" id = "submit_btn" value="SUBMIT">
+
+
         </div>
     </div>
 
     <script>
         /*
-        function displayDetergent() {
-            var deterCheck = document.getElementById("detergent_option");
-            var deterList = document.getElementById("detergent_list");
+                                                function displayDetergent() {
+                                                    var deterCheck = document.getElementById("detergent_option");
+                                                    var deterList = document.getElementById("detergent_list");
 
-            if (deterCheck.checked == true) {
-                deterList.display = "block";
-            } else {
-                deterList.display = "none";
-            }
-        }*/
+                                                    if (deterCheck.checked == true) {
+                                                        deterList.display = "block";
+                                                    } else {
+                                                        deterList.display = "none";
+                                                    }
+                                                }*/
 
         $("#detergent_option").on("click", function() {
             if ($("#detergent_list").is(":hidden")) {
@@ -295,7 +348,7 @@
                 $("#detergent_list").hide();
             }
         });
-        
+
         $("#softener_option").on("click", function() {
             if ($("#softener_list").is(":hidden")) {
                 $("#softener_list").show();
@@ -303,7 +356,7 @@
                 $("#softener_list").hide();
             }
         });
-        
+
         $("#bleach_option").on("click", function() {
             if ($("#bleach_list").is(":hidden")) {
                 $("#bleach_list").show();
@@ -311,7 +364,7 @@
                 $("#bleach_list").hide();
             }
         });
-        
+
         $("#plastic_option").on("click", function() {
             if ($("#plastic_bag").is(":hidden")) {
                 $("#plastic_bag").show();
