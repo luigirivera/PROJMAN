@@ -13,7 +13,7 @@ let userTypeSchema = mongoose.Schema({
     required : true,
     trim : true
   }
-})
+}, { collation : { locale : 'en_US', strength : 1 }})
 
 let UserType = mongoose.model('user_type', userTypeSchema)
 
