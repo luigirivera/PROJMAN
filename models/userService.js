@@ -6,6 +6,7 @@ function getAll() {
   return new Promise(
     function(resolve, reject) {
       User.find({}, 'username')
+      .populate('type')
       .then((users)=>{
         if (users) resolve(users)
         else throw Error('No users')
@@ -21,6 +22,7 @@ function getByUsername(username) {
   return new Promise(
     function(resolve, reject) {
       User.findOne({username}, 'username')
+      .populate('type')
       .then((user)=>{
         if (user) resolve(user)
         else throw Error('User ' + username + ' not found')
