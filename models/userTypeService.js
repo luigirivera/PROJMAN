@@ -47,4 +47,23 @@ function getBySystemName(name) {
   )
 }
 
-module.exports = {getAll, getById, getBySystemName}
+function createUserType(systemName, displayName) {
+  return new Promise(
+    function(resolve, reject) {
+      let userType = new UserType({
+        system_name : systemName,
+        display_name : displayName
+      })
+
+      userType.save()
+      .then((savedUserType)=>{
+        resolve(savedUserType)
+      })
+      .catch((err)=>{
+        reject(err)
+      })
+    }
+  )
+}
+
+module.exports = {getAll, getById, getBySystemName, createUserType}
