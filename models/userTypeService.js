@@ -5,7 +5,7 @@ const UserType = require(path.join(__dirname, 'UserType.js')).UserType
 function getAll() {
   return new Promise(
     function(resolve, reject) {
-      UserType.find({})
+      UserType.find({}).sort({ system_name : 1 })
       .then((userTypes)=>{
         if (userTypes) resolve(userTypes)
         else throw Error('No user types')
