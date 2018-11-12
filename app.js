@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 
 const config = require(path.join(__dirname, 'config', 'config.json'))
-//require(path.join(__dirname, 'config', 'database.js'))
+//require(path.join(__dirname, 'config', 'database.js')).connect()
 
 const app = express()
 

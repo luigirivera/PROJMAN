@@ -5,19 +5,26 @@ const uri = require(path.join(__dirname, 'config.json')).database.uri
 
 // checks if mongoose is connected to the database
 function isConnected(){
-  return mongoose.connection.readyState == 1;
+  return mongoose.connection.readyState == 1
 }
 
 // connects mongoose to the database
 function connect(){
-  if (!isConnected()) {
-    mongoose.connect(uri, {
+  return new Promise(
+    function(resolve, reject) {
+      if (isConnected()) resolve()
+      mongoose.connect(uri, {
         useNewUrlParser : true
-    });
-    mongoose.Promise = global.Promise;
-  }
+      })
+      .then(()=>{
+        mongoose.Promise = global.Promise
+        resolve()
+      })
+      .catch((err)=>{
+        reject(err)
+      })
+    }
+  )
 }
 
-connect();
-
-module.exports.mongoose = mongoose;
+module.exports.connect = connect;
