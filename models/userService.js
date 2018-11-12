@@ -5,8 +5,7 @@ const User = require(path.join(__dirname, 'User.js')).User
 function getAll() {
   return new Promise(
     function(resolve, reject) {
-      User.find({}, 'username')
-      .populate('type')
+      User.find({}, 'username').sort({ username : 1 }).populate('type')
       .then((users)=>{
         if (users) resolve(users)
         else throw Error('No users')
