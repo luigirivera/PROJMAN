@@ -23,6 +23,14 @@ module.exports.controller = function (app) {
     }
   })
 
+  app.post('/admin/logout', (req, res)=>{
+    console.log('POST /admin/logout')
+    if (req.session && req.session.uid) {
+      req.session.uid = null
+    }
+    res.redirect('/admin')
+  })
+
   app.all(/admin(\/.)*/, (req, res, next)=>{
     console.log('ALL /admin(/...)')
     console.log('Admin session check')
@@ -64,12 +72,12 @@ module.exports.controller = function (app) {
     console.log('GET /admin/addService')
     res.render(path.join('admin', 'addService.ejs'))
   })
-    
+
   app.get('/employee/orders', (req, res)=>{
     console.log('GET /admin/employee/orders')
     res.render(path.join('admin/employee', 'orders.ejs'))
   })
-    
+
   app.get('/employee/account', (req, res)=>{
     console.log('GET /admin/employee/account')
     res.render(path.join('admin/employee', 'account.ejs'))
