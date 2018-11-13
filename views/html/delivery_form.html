@@ -115,7 +115,7 @@
 
             background-color: rgb(220, 220, 220);
             border-radius: 1rem;
-            
+
         }
 
         .form-container div {
@@ -139,7 +139,7 @@
             border-style: solid;
 
             background-color: rgb(255, 255, 255);
-            border-color: 	#47A0BC;
+            border-color: #47A0BC;
         }
 
         .form-container a {
@@ -211,7 +211,6 @@
             padding: 10px;
 
         }
-        
     </style>
 
 </head>
@@ -266,9 +265,10 @@
                     <input type="checkbox" name="delivery_option" value="delivery">Delivery<br>
 
                     <a>Number of Wash Cycles</a>
-                    <input type="number" value="wash_load" min="0" style="width: 40px">
+                    <input type="number" value="wash_load" id="wash_load" min="0" style="width: 40px">
                     <br><a>Number of Dry Cycles</a>
-                    <input type="number" value="wash_load" min="0" style="width: 40px">
+                    <input type="number" value="wash_load" id="dry_load" min="0" style="width: 40px">
+                    <p id="dry_error" style="color: red; font-size: 1rem; margin-left: 13px; display: none">Dry services can only be availed with wash services</p>
 
                     <br><input type="checkbox" name="fold_option" value="fold">Fold<br>
 
@@ -277,12 +277,12 @@
                     <div id="detergent_list">
                         <ul>
                             <li><a class="options">Ariel</a>
-                            <input type="number" value="ariel_reg" min="0" style="width: 40px"></li>
+                                <input type="number" value="ariel_reg" min="0" style="width: 40px"></li>
                             <li><a class="options">Ariel with Passion</a>
-                            <input type="number" value="ariel_passion" min="0" style="width: 40px"></li>
+                                <input type="number" value="ariel_passion" min="0" style="width: 40px"></li>
                             <li><a class="options">Breeze</a>
-                            <input type="number" value="breeze" min="0" style="width: 40px"></li>
-                            
+                                <input type="number" value="breeze" min="0" style="width: 40px"></li>
+
                         </ul>
 
                     </div>
@@ -291,24 +291,24 @@
                     <div id="softener_list">
                         <ul>
                             <li><a class="options">Downy Regular</a>
-                        <input type="number" value="downy_reg" min="0" style="width: 40px"></li>
+                                <input type="number" value="downy_reg" min="0" style="width: 40px"></li>
                             <li><a class="options">Downy Mystique</a>
-                        <input type="number" value="downy_myst" min="0" style="width: 40px"></li>
+                                <input type="number" value="downy_myst" min="0" style="width: 40px"></li>
                             <li><a class="options">Champion</a>
-                        <input type="number" value="champion" min="0" style="width: 40px"><br></li>
+                                <input type="number" value="champion" min="0" style="width: 40px"><br></li>
                         </ul>
-                        
-                        
-                        
+
+
+
                     </div>
 
                     <input type="checkbox" name="bleach_option" value="bleach" id="bleach_option">Bleach<br>
                     <div id="bleach_list">
                         <ul>
-                        <li><a class="options">Zonrox Color Safe</a>
-                        <input type="number" value="zonrox" min="0" style="width: 40px"></li>
+                            <li><a class="options">Zonrox Color Safe</a>
+                                <input type="number" value="zonrox" min="0" style="width: 40px"></li>
                         </ul>
-                        
+
                     </div>
 
                     <input type="checkbox" name="plastic_option" value="plastic_bag" id="plastic_option" style="margin-top: 10px; margin-bottom: 15px;">Plastic Bag
@@ -329,18 +329,6 @@
     </div>
 
     <script>
-        /*
-                                                function displayDetergent() {
-                                                    var deterCheck = document.getElementById("detergent_option");
-                                                    var deterList = document.getElementById("detergent_list");
-
-                                                    if (deterCheck.checked == true) {
-                                                        deterList.display = "block";
-                                                    } else {
-                                                        deterList.display = "none";
-                                                    }
-                                                }*/
-
         $("#detergent_option").on("click", function() {
             if ($("#detergent_list").is(":hidden")) {
                 $("#detergent_list").show();
@@ -372,6 +360,22 @@
                 $("#plastic_bag").hide();
             }
         });
+
+        document.getElementById("submit_btn").onclick = function() {
+            var wash_load = document.getElementById("wash_load").value;
+            var dry_load = document.getElementById("dry_load").value;
+
+            if ((wash_load == null || wash_load == 0) && dry_load > 0) {
+                
+
+                $("form").submit(function(e) {
+                    e.preventDefault();
+                });
+                
+                $("#dry_error").css("display", "block");
+                $("#wash_load").prop('required', true);
+            }
+        };
     </script>
 
 
