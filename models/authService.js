@@ -7,14 +7,15 @@ function authUser(username, password) {
   return new Promise(
     function (resolve, reject) {
       var user
-      User.findOne({username}, 'password')
+      User.findOne({username}, '_id password')
       .then((doc)=>{
+        if (!doc) throw Error('User not found')
         user = doc
         return bcrypt.compare(password, user.password)
       })
       .then((result)=>{
-        if (result) resolve(user);
-        else reject(Error('Invalid credentials'))
+        if (result) resolve(user._id)
+        else throw Error('Invalid credentials')
       })
       .catch((err)=>{
         reject(err)
