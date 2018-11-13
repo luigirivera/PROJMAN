@@ -1,5 +1,7 @@
 const path = require('path')
 
+const authService = require(path.join(__dirname, '..', 'models', 'authService.js'))
+
 module.exports.controller = function (app) {
 
   app.post('/admin', (req, res)=>{
@@ -8,10 +10,18 @@ module.exports.controller = function (app) {
       // dummy login -- replace with auth function later
       let username = req.body.username
       let password = req.body.password
-      req.session.uid = 1
-      console.log('Login complete')
+      authService.authUser(username, password)
+      .then((result)=>{
+        req.session.uid = result
+        console.log('Logged in as user ' + result)
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+      .finally(()=>{
+        res.redirect('/admin')
+      })
     }
-    res.redirect('/admin')
   })
 
   app.get('/admin', (req, res)=>{
@@ -25,9 +35,10 @@ module.exports.controller = function (app) {
 
   app.post('/admin/logout', (req, res)=>{
     console.log('POST /admin/logout')
-    if (req.session && req.session.uid) {
+    /*if (req.session && req.session.uid) {
       req.session.uid = null
-    }
+    }*/
+    if (req.session) req.session.destroy()
     res.redirect('/admin')
   })
 
