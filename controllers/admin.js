@@ -14,11 +14,10 @@ module.exports.controller = function (app) {
       .then((result)=>{
         req.session.uid = result
         console.log('Logged in as user ' + result)
+        res.redirect('/admin')
       })
       .catch((err)=>{
         console.log(err)
-      })
-      .finally(()=>{
         res.redirect('/admin')
       })
     }
